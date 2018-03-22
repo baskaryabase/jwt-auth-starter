@@ -27,17 +27,29 @@ module.exports = function(app){
   })
 
 
-  app.post("/setpassword/:token",function(req,res,next){
-    let a = {}
-    var decoded = jwt_decode(req.params.token);
-    let password = req.body.password;
-  User.findById(decoded.sub, function(err, doc) {
-    if (err) {return false};
-    doc.password = password;
-    doc.save();
-    res.send("/")
+  app.post("/setpassword/:token", function(req, res, next) {
+    var token = req.params.token;
+    jwt.verify(token, config.secret, function(err, decoded) {
+      console.log("22222");
+      if (err) {
+        console.log(req.cookies.token);
+        res.status(401).send({ message: "unauthorized" });
+      } else {
+        User.findById(decoded.sub, function(err, doc) {
+          if (err) {
+            return false;
+          }
+          if (new Date() <= decoded.iat + 900000) {
+            res.send({ message: "link expired" });
+          } else {
+            doc.password = password;
+            doc.save();
+            res.send("/");
+          }
+        });
+      }
+    });
   });
-  })
 
 
   app.get("/logout",function(req,res,next){
