@@ -13,7 +13,6 @@ const app = express();
 app.use(morgan('combined'));
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true   }));
 router(app);
 
