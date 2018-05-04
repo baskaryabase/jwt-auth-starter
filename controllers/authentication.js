@@ -73,7 +73,7 @@ exports.signup = function(req,res,next){
   const username = req.body.username;
 
   if(!email||!password||!username){
-    res.status(422).send({error:"checkout all field"})
+    return res.status(422).send({error:"checkout all field"})
   }
   // check wheather email id exists in db
   User.findOne({email:email},function(err,existingUser){
