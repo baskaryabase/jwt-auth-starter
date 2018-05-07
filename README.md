@@ -1,4 +1,6 @@
-jwt auth starter Project
+# jwt auth starter Project
+
+## running server seperately
 1.clone the repository
 git clone https://github.com/smilysyndrella/jwt-auth-starter
 
@@ -10,3 +12,10 @@ npm i or yarn install
 
 4.start the server by running 
 npm start or yarn start
+
+## integrating the server with the working project
+1.import the router(component name ur choice) function from the ./router.js
+
+2.use the router function inside the main server file or the api file of the project<br/>
+  and pass app as a parameter
+  
