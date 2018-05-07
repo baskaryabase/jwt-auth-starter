@@ -1,16 +1,16 @@
 # jwt auth starter Project
 
 ## running server seperately
-1.clone the repository
+1.clone the repository<br/>
 `git clone https://github.com/smilysyndrella/jwt-auth-starter`
 
-2.change directory to cloned repo
+2.change directory to cloned repo<br/>
 `cd jwt-auth-starter`
 
-3.install all the dependencies
+3.install all the dependencies<br/>
 `npm i or yarn install`
 
-4.start the server by running 
+4.start the server by running <br/>
 `npm start or yarn start`
 
 ## integrating the server with the working project
