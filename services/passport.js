@@ -16,7 +16,6 @@ function validateEmail(email) {
   }
 }
 
-
 const jwtOptions = {
   jwtFromRequest: ExtractJwt.fromHeader("authorization"),
   secretOrKey: config.secret
@@ -68,5 +67,5 @@ const jwtLogin = new jwtStrategy(jwtOptions, function(payload, done){
 
 })
 
-passport.use(jwtLogin);
-passport.use(localLogin);
+passport.use("jwt",jwtLogin);
+passport.use("local",localLogin);
