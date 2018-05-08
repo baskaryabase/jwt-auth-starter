@@ -23,7 +23,7 @@
 ## Api endpoints for auth 
 1. "/signup"<br/>
    - method(post)<br/>
-   creates user account with following credentials and serves token and authenticates user<br/>
+   creates user account with following credentials in json payload and serves token and authenticates user<br/>
      - username
      - password
      - email
