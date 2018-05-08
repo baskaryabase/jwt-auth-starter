@@ -1,7 +1,7 @@
 # jwt auth starter Project
-1.[Running server seperately](#running-server-seperately)
-2.[Integrating the server with the working project](#integrating-the-server-with-the-working-project)
-3.[API Endpoints](api-endpoints-for-auth)
+1.[Running server seperately](#running-server-seperately)<br/>
+2.[Integrating the server with the working project](#integrating-the-server-with-the-working-project)<br/>
+3.[API Endpoints](#api-endpoints-for-auth)
 
 ## running server seperately
 1.clone the repository<br/>
