@@ -37,8 +37,8 @@
 3. "/auth"<br/>
    - method(get)<br/>
    verifies jwt token and authenticates user with token in header
-   - header
-     -authorization(token)
+     - header
+       -authorization(token)
      
 4. "/create-forgot-password-link"<br/>
    - method(post)<br/>
