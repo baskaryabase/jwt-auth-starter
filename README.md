@@ -30,7 +30,7 @@
 
 2. "/signin"<br/>
    - method(post)<br/>
-   allows user to sign in and serves token and user credentials with following details<br/>
+   allows user to sign in and serves token and user credentials with following details in json payload<br/>
      - username or email
      - password
 
@@ -43,4 +43,5 @@
 4. "/create-forgot-password-link"<br/>
    - method(post)<br/>
    allows user to generate forgot password link and sends to email id<br/>
+   with following credentials in json payload
      - email
